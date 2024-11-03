@@ -32,7 +32,7 @@ export function Navbar() {
   return (
     <nav className="max-w-7xl mx-auto px-4 md:px-8 py-5 grid grid-cols-12">
       <div className="col-span-6 flex md:col-span-3">
-        <Link href="/">
+        <Link href="/" passHref>
           <h1 className="text-3xl font-semibold">
             Pawan <span className="text-orange-500">Shetty</span>
           </h1>
@@ -61,7 +61,9 @@ export function Navbar() {
 
       <div className="flex items-center justify-end md:col-span-3 col-span-6">
         <Button className="hidden sm:flex" asChild>
-          <a href="mailto:wrk4pawan@gmail.com">Contact Me</a>
+          <Link href="mailto:wrk4pawan@gmail.com" passHref>
+            <a>Contact Me</a> {/* This is okay as it is now */}
+          </Link>
         </Button>
         <div className="sm:hidden">
           <MobileMenu />
