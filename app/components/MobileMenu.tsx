@@ -22,7 +22,6 @@ export function MobileMenu() {
   useEffect(() => {
     setOpen(false);
   }, [location]);
-
   return (
     <Sheet open={open} onOpenChange={(state) => setOpen(state)}>
       <SheetTrigger asChild>
@@ -50,7 +49,7 @@ export function MobileMenu() {
 
         <SheetFooter className="mt-5">
           <SheetClose asChild>
-            <Button>Close</Button>
+            <Button type="submit">Close</Button>
           </SheetClose>
         </SheetFooter>
       </SheetContent>
